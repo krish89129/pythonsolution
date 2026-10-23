@@ -1,109 +1,265 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Neon Generator</title>
+PYTHON QUESTION BANK
+160 QUESTIONS | BEGINNER, INTERMEDIATE, ADVANCED
 
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #141e30, #243b55);
-            color: white;
-            transition: background 0.5s;
-        }
+PRIORITY 1 — MUST PREPARE
 
-        .container {
-            text-align: center;
-            padding: 40px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.08);
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(10px);
-        }
+==================================================
+1. DATA TYPES
+==================================================
 
-        h1 {
-            font-size: 35px;
-            color: #00ffff;
-            text-shadow: 0 0 15px #00ffff;
-        }
+Q1 [Beginner] What are Python data types? Identify the types of 10, 10.5, 'Hello', True, and None.
+Q2 [Beginner] Create variables for int, float, str, bool, list, tuple, set, and dict; print values and types.
+Q3 [Beginner] Explain list versus tuple with examples.
+Q4 [Intermediate] Predict: a=[10,20,30]; b=a; b[0]=100; print(a).
+Q5 [Intermediate] Explain mutable versus immutable; classify int, str, list, tuple, set, dict.
+Q6 [Intermediate] Remove duplicate elements from a list using a set.
+Q7 [Intermediate] Create a dictionary of three students and marks; display the highest scorer.
+Q8 [Advanced] Predict: a=[1,2,3]; b=a.copy(); b[0]=100; print(a); print(b).
+Q9 [Advanced] What happens when a set is created from [1,2,[3,4]]? Explain.
+Q10 [Advanced] Separate a mixed list into integer, float, string, and Boolean lists.
 
-        p {
-            font-size: 18px;
-            margin: 25px 0;
-        }
 
-        button {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 30px;
-            background: #00ffff;
-            color: #111;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+==================================================
+2. OPERATORS
+==================================================
 
-        button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 25px #00ffff;
-        }
-    </style>
-</head>
+Q1 [Beginner] Write a program demonstrating +, -, *, /, //, %, and **.
+Q2 [Beginner] Check whether a number is greater than, less than, or equal to 50.
+Q3 [Beginner] Use and, or, and not to check club eligibility.
+Q4 [Intermediate] Predict: x=10; x+=5; x*=2; x-=4; print(x).
+Q5 [Intermediate] Check whether a character exists in a string using in and not in.
+Q6 [Intermediate] Predict: a=[1,2,3]; b=a; c=a.copy(); print(a is b); print(a is c); print(a==c).
+Q7 [Intermediate] Check whether a number is even using bitwise AND.
+Q8 [Advanced] Predict outputs of 5&3, 5|3, 5^3, 5<<1, and 5>>1.
+Q9 [Advanced] Check whether a number is a power of two using bitwise operators.
+Q10 [Advanced] Explain == versus is and demonstrate when their results differ.
 
-<body>
 
-    <div class="container">
-        <h1>✨ Neon Generator ✨</h1>
+==================================================
+3. OPERATOR PRECEDENCE
+==================================================
 
-        <p id="message">Click the button to generate something random!</p>
+Q1 [Beginner] Predict: print(5 + 3 * 2).
+Q2 [Beginner] Predict: print((5 + 3) * 2).
+Q3 [Beginner] Calculate: print(20 / 4 + 3 * 2).
+Q4 [Intermediate] Predict: print(10 - 4 // 2 + 3).
+Q5 [Intermediate] Predict: print(2 ** 3 ** 2).
+Q6 [Intermediate] Predict: print(10 > 5 and 4 < 2 or 3 == 3).
+Q7 [Intermediate] Calculate: print(5 + 2 * 3 ** 2 // 4).
+Q8 [Advanced] Predict: print(not 5 > 3 and 2 < 4 or False).
+Q9 [Advanced] Predict and explain: x=4; y=3; print(x+y*2**3>10 and x%2==0).
+Q10 [Advanced] Add parentheses to 2 + 3 * 4 ** 2 so the result is 100 without changing operators or numbers.
 
-        <button onclick="generateRandom()">
-            Generate Magic
-        </button>
-    </div>
 
-    <script>
-        const messages = [
-            "Keep coding, keep growing! 🚀",
-            "You are doing amazing! 🔥",
-            "Today is a great day to learn! 💻",
-            "Dream big and build bigger! 🌟",
-            "One bug at a time! 🐛",
-            "Your next project could be awesome! 🎯"
-        ];
+==================================================
+4. TYPE CONVERSION
+==================================================
 
-        const colors = [
-            "#141e30",
-            "#42275a",
-            "#134e5e",
-            "#4b1248",
-            "#1d4350",
-            "#232526"
-        ];
+Q1 [Beginner] Convert '25' to an integer and print its type.
+Q2 [Beginner] Convert 15 to float and 15.5 to integer.
+Q3 [Beginner] Convert 100 to string and concatenate it with 'Python'.
+Q4 [Intermediate] Predict: int(9.8), float('12.5'), and str(100)+'20'.
+Q5 [Intermediate] Accept two numeric strings, convert to integers, and add them.
+Q6 [Intermediate] Predict bool(0), bool(1), bool(''), and bool('False').
+Q7 [Intermediate] Convert a list of numeric strings into integers.
+Q8 [Advanced] Predict the result/error: x='10'; y=5; print(x+y).
+Q9 [Advanced] Convert a decimal number stored as a string to integer without using float().
+Q10 [Advanced] Explain why int('10.5') errors; write a conversion that returns 10.
 
-        function generateRandom() {
-            // Generate a random message
-            const randomMessage =
-                messages[Math.floor(Math.random() * messages.length)];
 
-            // Generate a random background color
-            const randomColor =
-                colors[Math.floor(Math.random() * colors.length)];
+==================================================
+5. CONDITIONAL STATEMENTS
+==================================================
 
-            // Update webpage
-            document.getElementById("message").textContent =
-                randomMessage;
+Q1 [Beginner] Check whether a number is positive, negative, or zero.
+Q2 [Beginner] Check whether a number is even or odd.
+Q3 [Beginner] Check voting eligibility for age 18 or above.
+Q4 [Intermediate] Find the largest of three numbers using if-elif-else.
+Q5 [Intermediate] Assign grades: 90+ A; 75-89 B; 60-74 C; 40-59 D; below 40 Fail.
+Q6 [Intermediate] Check whether a year is a leap year.
+Q7 [Intermediate] Classify a character as vowel, consonant, digit, or special character.
+Q8 [Advanced] Validate three triangle sides and classify the triangle as equilateral, isosceles, or scalene.
+Q9 [Advanced] Use nested if to validate username, password, and account-active status.
+Q10 [Advanced] Calculate an electricity bill using slabs, applying each rate only to units in that slab.
 
-            document.body.style.background = randomColor;
-        }
-    </script>
 
-</body>
-</html>
+==================================================
+6. LOOPS — FOR, WHILE, RANGE(), NESTED LOOPS
+==================================================
+
+Q1 [Beginner] Print numbers 1 to 10 using for.
+Q2 [Beginner] Print numbers 10 down to 1 using while.
+Q3 [Beginner] Print even numbers from 1 to 50 using range().
+Q4 [Intermediate] Calculate the sum of the first n natural numbers using a loop.
+Q5 [Intermediate] Calculate factorial using while.
+Q6 [Intermediate] Reverse a number using a loop.
+Q7 [Intermediate] Check whether a number is prime using a loop.
+Q8 [Advanced] Print Fibonacci numbers up to n terms without recursion.
+Q9 [Advanced] Use nested loops to print a 1-to-5-row star triangle.
+Q10 [Advanced] Use nested loops to print all primes between 1 and 100.
+
+
+==================================================
+7. LOOP CONTROL — BREAK, CONTINUE, PASS, SYS.EXIT()
+==================================================
+
+Q1 [Beginner] Explain break and stop a loop when it reaches 5.
+Q2 [Beginner] Explain continue and skip 5 while printing 1 to 10.
+Q3 [Beginner] Explain pass and write a loop containing pass.
+Q4 [Intermediate] Predict: for i in range(1,6): if i==3: break; print(i).
+Q5 [Intermediate] Predict: for i in range(1,6): if i==3: continue; print(i).
+Q6 [Intermediate] Keep accepting numbers until the user enters 0.
+Q7 [Intermediate] Search a list for a number and stop when found.
+Q8 [Advanced] Print a 1-5 multiplication table but skip products divisible by 3.
+Q9 [Advanced] Ask for a password, allow three attempts, and terminate after failures.
+Q10 [Advanced] Explain and demonstrate break, continue, pass, and sys.exit(); import sys.
+
+
+==================================================
+8. STRINGS — INDEXING, SLICING, IMMUTABILITY, STRING OPERATORS
+==================================================
+
+Q1 [Beginner] Print the first and last characters of 'Python' using indexing.
+Q2 [Beginner] Print each character of 'Computer' on a separate line using a loop.
+Q3 [Beginner] Explain negative indexing and print the last three characters of 'Programming'.
+Q4 [Intermediate] Predict: s='Python'; print(s[1]); print(s[-2]); print(s[1:4]); print(s[::-1]).
+Q5 [Intermediate] Extract the first five and last five characters of a string.
+Q6 [Intermediate] Explain immutability and the result/error of s='Python'; s[0]='J'; print(s).
+Q7 [Intermediate] Check whether two strings are equal using comparison operators.
+Q8 [Advanced] Check whether a string is a palindrome without a built-in reverse function.
+Q9 [Advanced] Remove all spaces from a string and reverse the remaining characters.
+Q10 [Advanced] From 'PythonProgramming', use slicing to extract 'Pyt', 'Programming', 'nohtyP', and 'PtoPormig' where possible.
+
+
+==================================================
+9. STRING METHODS
+==================================================
+
+Q1 [Beginner] Convert 'hello python' to uppercase and 'HELLO PYTHON' to lowercase.
+Q2 [Beginner] Remove leading/trailing spaces from '   Python Programming   ' using strip().
+Q3 [Beginner] Replace 'Java' with 'Python' in 'I love Java'.
+Q4 [Intermediate] Predict find('Pro'), count('m'), and replace('Python','Java') for 'Python Programming'.
+Q5 [Intermediate] Count occurrences of a chosen character using count().
+Q6 [Intermediate] Split 'apple,banana,mango,orange' into a list using split().
+Q7 [Intermediate] Join ['Python','is','easy'] using ' '.join().
+Q8 [Advanced] Count each word's frequency using split() and a dictionary.
+Q9 [Advanced] Remove duplicate words while preserving their original order.
+Q10 [Advanced] Convert a sentence to title case without title(); also remove extra spaces.
+
+
+==================================================
+10. INPUT/OUTPUT — INPUT(), PRINT(), SEP, END, MAP()
+==================================================
+
+Q1 [Beginner] Accept a name with input() and print a welcome message.
+Q2 [Beginner] Accept two integers and display their sum.
+Q3 [Beginner] Print Python, Java, C++ on one line using sep.
+Q4 [Intermediate] Predict: print('A','B','C',sep='-',end='!'); print('Python').
+Q5 [Intermediate] Accept three space-separated integers in one line and store them separately.
+Q6 [Intermediate] Explain map(); accept five numbers on one line and convert them to integers.
+Q7 [Intermediate] Accept name, roll number, and marks; display them formatted.
+Q8 [Advanced] Accept integers and print max, min, and sum without max(), min(), or sum().
+Q9 [Advanced] Accept comma-separated numbers, convert to floats with map(), and calculate average.
+Q10 [Advanced] Accept values in one line, convert to integers, and print only those greater than their average.
+
+
+PRIORITY 2 — THEORY AND PRACTICAL TOPICS
+
+==================================================
+11. IDENTIFIERS AND KEYWORDS
+==================================================
+
+Q1 [Beginner] What is an identifier? Give five examples.
+Q2 [Beginner] What are Python keywords? Write any ten.
+Q3 [Beginner] Identify valid identifiers: student_name, 2marks, total_marks, class, _value.
+Q4 [Intermediate] Explain Python variable-naming rules with examples.
+Q5 [Intermediate] Correct: first-name, my name, student@id, for, 1st_value.
+Q6 [Intermediate] Use meaningful identifiers to calculate rectangle area and perimeter.
+Q7 [Intermediate] Explain keyword versus identifier with examples.
+Q8 [Advanced] Check whether user input is a valid identifier using a built-in method.
+Q9 [Advanced] Explain why True, False, and None cannot be ordinary variable names.
+Q10 [Advanced] Correct: student name='Aman'; class='BCA'; 2marks=80; total_marks=100.
+
+
+==================================================
+12. STRUCTURE OF A PYTHON PROGRAM
+==================================================
+
+Q1 [Beginner] Explain basic program structure and write Hello World.
+Q2 [Beginner] What are comments? Write a program with single-line comments.
+Q3 [Beginner] Explain indentation and write a correctly indented if statement.
+Q4 [Intermediate] Write a program with comments, variables, input, and output to add two numbers.
+Q5 [Intermediate] Explain import; import math and calculate a square root.
+Q6 [Intermediate] Write and call a function that calculates circle area.
+Q7 [Intermediate] Find indentation errors: x=10; if x>5:; print('Greater'); print('Done').
+Q8 [Advanced] Write a complete program with import, input, function, condition, and output.
+Q9 [Advanced] Explain if __name__ == '__main__': and demonstrate it.
+Q10 [Advanced] Correct a program that imports math, inputs radius, calculates area, prints it, and calls calculate().
+
+
+==================================================
+13. STATEMENTS VS EXPRESSIONS
+==================================================
+
+Q1 [Beginner] What is an expression? Give three examples.
+Q2 [Beginner] What is a statement? Give three examples.
+Q3 [Beginner] Classify: 10+20; x=10; print(x); 5>3.
+Q4 [Intermediate] Explain assignment statement versus arithmetic expression.
+Q5 [Intermediate] Identify the expression in result=10+5*2.
+Q6 [Intermediate] Write a program containing five expressions and five different statement types.
+Q7 [Intermediate] Explain why if x>10: is a statement while x>10 is an expression.
+Q8 [Advanced] Predict and identify parts: x=5; y=x*2+3; if y>10: print(y).
+Q9 [Advanced] Use expressions inside assignment, conditional, and print statements; identify them.
+Q10 [Advanced] Explain expression statements versus assignment statements, with an evaluated-but-not-stored expression example.
+
+
+==================================================
+14. STRING FORMATTING — %, FORMAT(), F-STRINGS
+==================================================
+
+Q1 [Beginner] Use an f-string to display a student's name and age.
+Q2 [Beginner] Display two integers using format().
+Q3 [Beginner] Use % formatting to display a name and marks.
+Q4 [Intermediate] Display a price to two decimal places using an f-string.
+Q5 [Intermediate] Predict: name='Aman'; marks=85; print('{} scored {} marks'.format(name,marks)).
+Q6 [Intermediate] Display name, roll number, percentage using %, format(), and f-strings.
+Q7 [Intermediate] Use an f-string to display an arithmetic calculation directly.
+Q8 [Advanced] Print a number in width 10, right-aligned, with two decimal places.
+Q9 [Advanced] Print a neatly aligned multiplication table using f-strings.
+Q10 [Advanced] Accept a student's name and three marks; calculate total/percentage and display a report to two decimals.
+
+
+==================================================
+15. PYTHON FEATURES AND APPLICATIONS
+==================================================
+
+Q1 [Beginner] What is Python? List five important features.
+Q2 [Beginner] Explain why Python is called a high-level language.
+Q3 [Beginner] What does it mean that Python is interpreted?
+Q4 [Intermediate] Explain compiled versus interpreted languages; where does Python fit?
+Q5 [Intermediate] Explain portability and platform independence with examples.
+Q6 [Intermediate] Compare dynamically typed and statically typed languages with examples.
+Q7 [Intermediate] List five Python applications and explain two.
+Q8 [Advanced] Explain Python use in web development, data science, AI, and automation.
+Q9 [Advanced] Compare Python with C and Java in syntax, execution, memory management, and learning ease.
+Q10 [Advanced] For a website, Excel automation, and customer-data analysis, explain Python's suitability and name possible libraries/frameworks.
+
+
+==================================================
+16. PYTHON HISTORY — GUIDO VAN ROSSUM, PYTHON 2 VS PYTHON 3
+==================================================
+
+Q1 [Beginner] Who created Python, and when was it first released?
+Q2 [Beginner] What inspired Python's development?
+Q3 [Beginner] Explain Guido van Rossum's significance in Python history.
+Q4 [Intermediate] Explain major differences between Python 2 and Python 3.
+Q5 [Intermediate] Compare Python 2's print statement with Python 3's print() function.
+Q6 [Intermediate] Compare integer division in Python 2 and Python 3 with an example.
+Q7 [Intermediate] Why was Python 3 introduced? Explain the need for improvements.
+Q8 [Advanced] Compare Python 2 and 3 in string handling, division, syntax, and compatibility.
+Q9 [Advanced] Convert Python 2 code using print 'Hello' and raw_input() to Python 3; explain changes.
+Q10 [Advanced] Why is Python 2 not recommended for new projects? Explain supported-version importance.
+
+
+END OF QUESTION BANK
+Total: 16 Topics × 10 Questions = 160 Questions
