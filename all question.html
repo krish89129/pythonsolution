@@ -1,2 +1,109 @@
-for i in range(1, 4):
-    print(i)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Neon Generator</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            transition: background 0.5s;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 35px;
+            color: #00ffff;
+            text-shadow: 0 0 15px #00ffff;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 25px 0;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #00ffff;
+            color: #111;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px #00ffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>✨ Neon Generator ✨</h1>
+
+        <p id="message">Click the button to generate something random!</p>
+
+        <button onclick="generateRandom()">
+            Generate Magic
+        </button>
+    </div>
+
+    <script>
+        const messages = [
+            "Keep coding, keep growing! 🚀",
+            "You are doing amazing! 🔥",
+            "Today is a great day to learn! 💻",
+            "Dream big and build bigger! 🌟",
+            "One bug at a time! 🐛",
+            "Your next project could be awesome! 🎯"
+        ];
+
+        const colors = [
+            "#141e30",
+            "#42275a",
+            "#134e5e",
+            "#4b1248",
+            "#1d4350",
+            "#232526"
+        ];
+
+        function generateRandom() {
+            // Generate a random message
+            const randomMessage =
+                messages[Math.floor(Math.random() * messages.length)];
+
+            // Generate a random background color
+            const randomColor =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            // Update webpage
+            document.getElementById("message").textContent =
+                randomMessage;
+
+            document.body.style.background = randomColor;
+        }
+    </script>
+
+</body>
+</html>
