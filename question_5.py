@@ -3,7 +3,7 @@
 # Data type	Classification
 int = "Immutable"
 str = "Immutable"
-list = "Mutable"
 tuple = "Immutable"
+list = "Mutable"
 set = "Mutable"
 dict = "Mutable"
