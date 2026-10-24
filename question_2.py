@@ -1,3 +1,5 @@
+# Create variables for int, float, str, bool, list, tuple, set, and dict; print values and types.
+
 a = 22
 b = 5.77
 c = True
