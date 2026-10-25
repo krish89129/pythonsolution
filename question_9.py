@@ -8,5 +8,11 @@ print(a)
 # Unhashable ka matlab: Aisi cheez jise Python set ke andar store nahi kar sakta ya dictionary ki key nahi bana sakta.
 
 
-a = {(1, 2), (3, 4)}
-print(a)
+
+# Data type 	Hashable
+#int	✅ Yes
+#str	✅ Yes
+#tuple	✅ Usually, agar uske saare elements hashable hon
+#list	❌ No
+#dict	❌ No
+#set	❌ No
