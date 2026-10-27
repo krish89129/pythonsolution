@@ -12,4 +12,3 @@ else:
  print("are you not eligible to join to a club")
 
 
-
