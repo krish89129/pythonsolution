@@ -1,3 +1,4 @@
+# Check whether a number is greater than, less than, or equal to 50.
 num = int(input("enter a num: "))
 
 if num > 50:
