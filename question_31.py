@@ -1,6 +1,7 @@
 # Q31 Convert '25' to an integer and print its type.
 
-a = 25
+a = '25'
+print(int(a))
 print(type(a))
 
 # Q32 Convert 15 to float and 15.5 to integer.
@@ -8,5 +9,5 @@ print(type(a))
 a = 15
 print(float(a))
 
-a = 33.5
+a = 15.5
 print(int(a))
