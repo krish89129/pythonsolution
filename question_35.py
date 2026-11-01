@@ -12,3 +12,10 @@ result = num1 + num2
 
 print("sum:", result)
 
+
+# Q36  Predict bool(0), bool(1), bool(''), and bool('False').
+
+print(bool(0)) #F
+print(bool(1))  #T
+print(bool('')) #F
+print(bool('False')) #T
