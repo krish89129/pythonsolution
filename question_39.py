@@ -15,5 +15,11 @@ print(result)
 # result mein final integer value store hoti hai.
 
 
-a = ('12.4')
-print(type(a))
+#Q40 Explain why int('10.5') errors; write a conversion that returns 10.
+
+
+# print(int('12.4')) #value error
+
+a = '12.4'
+result = int(a.split('.')[0])
+print(result)
